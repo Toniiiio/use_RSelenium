@@ -5,10 +5,10 @@ sudo apt-get update
 sudo apt-get install -y docker-engine
 sudo service docker start
 sudo docker run hello-world
-sudo docker run -d -p 4445:4444 selenium/standalone-firefox:2.53.0
+sudo docker run -d -p 4445:4444 selenium/standalone-firefox
 sudo docker ps
 ')
-writeLines(text = script, con = "installer2.sh")
+writeLines(text = script, con = "installer.sh")
 
 system("chmod +x installer.sh")
 system("./installer.sh")
